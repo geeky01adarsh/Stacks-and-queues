@@ -13,11 +13,9 @@ bool balanced_parantheses(string s)
         if (s[i] == '(' || s[i] == '{' || s[i] == '[')
         {
             st.push(s[i]);
-            // cout<<st.top()<<endl;
         }
         else if (s[i] == ')')
         {
-            // cout<<s[i];
             if (st.top() == '(')
                 st.pop();
             else
@@ -32,17 +30,13 @@ bool balanced_parantheses(string s)
         }
         else if (s[i] == ']')
         {
-            // cout<<s[i];
             if (st.top() == '[')
                 st.pop();
             else
                 return 0;
         }
     }
-    // if (st.empty())
         return 1;
-    // else
-        // return 0;
 }
 
 int main()
